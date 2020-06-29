@@ -15,7 +15,7 @@ function submitData(name, email) {
           "Accept": "application/json"
         },
         
-        body: JSON.stringify( {
+        body: JSON.stringify({
           name,
           email
         })
@@ -32,6 +32,7 @@ function submitData(name, email) {
       })
       
       .then(function(object) {
+        //   ^object refers to the return value of the first then() --- the object is the response from the server
         document.body.innerHTML = object[ "id" ]
       })
       
